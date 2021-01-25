@@ -1,23 +1,38 @@
 import React from 'react';
 
 export default function EternalCard({card}) {
-            
+    const {
+            Name, 
+            SetNumber, 
+            EternalID, 
+            CardText,
+            Cost,
+            Influence,
+            Attack,
+            Health,
+            Rarity,
+            Type,
+            ImageUrl,
+            DetailsUrl,
+            DeckBuildable
+          } = card;
+
     return (
         <>
-        <div>Name: {card.Name}</div>
-        <div>Set Number: {card.SetNumber}</div>
-        <div>Eternal ID: {card.EternalId}</div>
-        <div>Card Text: {card.CardText}</div>
-        <div>Cost: {card.Cost}</div>
-        <div>Influence: {card.Influence}</div>
-        <div>Attack: {card.Attack}</div>
-        <div>Health: {card.Health}</div>
-        <div>Rarity: {card.Rarity}</div>
-        <div>Type: {card.Type}</div>
-        <div>Image URL: {card.ImageUrl}</div>
-        <img src={card.ImageUrl} />
-        <div>Details URL: {card.DetailsUrl}</div>
-        <div>Deck Buildable: {card.DeckBuildable}</div>
+        <div><strong>Name:</strong> {Name}</div>
+        <div><strong>Set Number:</strong> {SetNumber}</div>
+        <div><strong>Eternal ID:</strong> {EternalID}</div>
+        <div><strong>Card Text:</strong> {CardText}</div>
+        <div><strong>Cost:</strong> {Cost}</div>
+        <div><strong>Influence:</strong> {Influence}</div>
+        <div><strong>Attack:</strong> {Attack}</div>
+        <div><strong>Health:</strong> {Health}</div>
+        <div><strong>Rarity:</strong> {Rarity}</div>
+        <div><strong>Type:</strong> {Type}</div>
+        <div><strong>Image URL:</strong> {ImageUrl}</div>
+        <img src={ImageUrl} />
+        <div><strong>Details URL:</strong> {DetailsUrl}</div>
+        <div><strong>Deck Buildable:</strong> {DeckBuildable}</div>
         </>
     );
 }
