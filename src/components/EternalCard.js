@@ -16,7 +16,7 @@ export default function EternalCard({card}) {
             DetailsUrl,
             DeckBuildable
           } = card;
-
+    const stats = { Attack, Health };
     return (
         <>
         <div><strong>Name:</strong> {Name}</div>
@@ -25,8 +25,8 @@ export default function EternalCard({card}) {
         <div><strong>Card Text:</strong> {CardText}</div>
         <div><strong>Cost:</strong> {Cost}</div>
         <div><strong>Influence:</strong> {Influence}</div>
-        <div><strong>Attack:</strong> {Attack}</div>
-        <div><strong>Health:</strong> {Health}</div>
+        <div><strong>Attack:</strong> {stats.Attack}</div>
+        <div><strong>Health:</strong> {stats.Health}</div>
         <div><strong>Rarity:</strong> {Rarity}</div>
         <div><strong>Type:</strong> {Type}</div>
         <div><strong>Image URL:</strong> {ImageUrl}</div>

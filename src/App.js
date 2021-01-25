@@ -28,6 +28,8 @@ function App() {
       )
   }, [])
 
+  const filteredItems = items.filter(eachItem => eachItem['Name'].toLowerCase().includes('torch'));
+
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
@@ -35,7 +37,7 @@ function App() {
   } else {
     return (
       <ul>
-        {items.map(item => (
+        {filteredItems.map(item => (
           <>
             <EternalCard key={`${item.SetNumber}-${item.EternalID}`} card={item} />
             <hr />
